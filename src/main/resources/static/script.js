@@ -22,7 +22,7 @@ async function register()
       return;
   }
 
- const response= await fetch("/api/register",{
+ const response= await fetch("/register",{
             method: "POST",
             headers:{
               "Content-Type": "application/json"
@@ -50,7 +50,7 @@ async function register()
          }
 
 
-     const response = await fetch("/api/login", {
+     const response = await fetch("/login", {
          method: "POST",
          headers: {
              "Content-Type": "application/json"
@@ -104,7 +104,7 @@ async function register()
 
 
     try{
-     const response = await fetch("/api/convert", {
+     const response = await fetch("/convert", {
          method: "POST",
          headers: {
              "Content-Type": "application/json",
@@ -138,7 +138,7 @@ async function register()
 
  async function loadCurrencyDropdowns() {
 
-   const response = await fetch("/api/currencies.json");
+   const response = await fetch("/currencies.json");
        const currencies = await response.json();
 
        const from = document.getElementById("from");
@@ -200,7 +200,7 @@ async function register()
 
      const apiKey = localStorage.getItem("apiKey");
 
-     const response = await fetch("/api/history", {
+     const response = await fetch("/history", {
          headers: {
              "api-key": apiKey
          }
@@ -245,7 +245,7 @@ async function register()
 
 async function loadCurrencies() {
 
-    const response = await fetch("/api/currencies");
+    const response = await fetch("/currencies");
     const data = await response.json();
 
     let html = "";
@@ -281,7 +281,7 @@ async function loadCurrencies() {
          return;
      }
 
-     const response = await fetch("/api/history", {
+     const response = await fetch("/history", {
          method: "DELETE",
          headers: {
              "api-key": apiKey
