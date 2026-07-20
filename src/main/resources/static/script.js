@@ -269,7 +269,8 @@ async function loadCurrencies() {
 
     if(!apiKey)
     {
-        window.location.href= "login.html";
+        window.location.replace("login.html");
+        return;
     }
  }
 

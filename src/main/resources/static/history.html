@@ -34,8 +34,10 @@
 </div>
 <script src="script.js?v=1"></script>
 <script>
-    checkLogin();
-    loadHistory();
+    window.addEventListener("pageshow", function () {
+        checkLogin();
+        loadHistory();
+    });
 </script>
 </body>
 </html>

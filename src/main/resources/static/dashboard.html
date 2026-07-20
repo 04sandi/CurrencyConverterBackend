@@ -33,7 +33,9 @@
 </div>
 <script src="script.js?v=1"></script>
 <script>
-    checkLogin();
+    window.addEventListener("pageshow", function () {
+        checkLogin();
+    });
 </script>
 </body>
 </html>
