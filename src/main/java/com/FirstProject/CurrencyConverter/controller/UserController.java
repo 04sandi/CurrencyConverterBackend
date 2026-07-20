@@ -36,7 +36,7 @@ public class UserController {
 
         if(userRepository.findByEmail(registerDto.getEmail()).isPresent())
         {
-            return ResponseEntity.badRequest().body("Email already exist");
+            return ResponseEntity.badRequest().body("Email is already registered");
         }
         userRepository.save(user);
 

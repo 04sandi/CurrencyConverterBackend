@@ -234,6 +234,7 @@ async function register()
              <td>${item.fromCurrency}</td>
              <td>${item.toCurrency}</td>
              <td>${item.amount}</td>
+             <td>1 ${item.fromCurrency} = ${item.rate.toFixed(2)} ${item.toCurrency}</td>
              <td>${item.convertedAmount}</td>
              <td>${formattedDate}</td>
          </tr>
