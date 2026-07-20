@@ -260,7 +260,7 @@ async function loadCurrencies() {
 
  function logout() {
      localStorage.removeItem("apiKey");
-     window.location.href = "login.html";
+     window.location.replace("login.html");
  }
 
  function checkLogin()
