@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.List;
 
 @Service
@@ -54,7 +55,7 @@ public class CurrencyServiceImpl implements CurrencyService {
         currency.setRate(rate);
         currency.setAmount(amount);
         currency.setConvertedAmount(convertedAmount);
-        currency.setConversionTime(LocalDateTime.now());
+        currency.setConversionTime(LocalDateTime.now(ZoneId.of("Asia/Kolkata")));
         currency.setUserId(userId);
 
         Currency currency1=currencyRepository.save(currency);
