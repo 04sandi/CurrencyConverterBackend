@@ -186,14 +186,14 @@ async function register()
 
  function swapCurrencies()
  {
-     const from = document.getElementById("from");
-     const to = document.getElementById("to");
+     const from = document.getElementById("from").tomselect;
+     const to = document.getElementById("to").tomselect;
 
-     const temp = from.value;
+     const fromValue = from.getValue();
+     const toValue = to.getValue();
 
-     from.value = to.value;
-
-     to.value = temp;
+     from.setValue(toValue);
+     to.setValue(fromValue);
  }
 
  async function loadHistory() {
